@@ -5,9 +5,9 @@ Subject: [PATCH] dwl: add dwindle layout
 
 dwl: add dwindle layout
 ---
- dwl.c        | 53 ++++++++++++++++++++++++++++++++++++++++++++++++++++
- 1 files changed, 55 insertions(+)
- 
+ dwl.c        | 51 ++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 files changed, 51 insertions(+)
+
 diff --git a/dwl.c b/dwl.c
 index 101a45f..5f1b762 100644
 --- a/dwl.c
@@ -20,8 +20,8 @@ index 101a45f..5f1b762 100644
  static void togglefloating(const Arg *arg);
  static void togglefullscreen(const Arg *arg);
  static void toggletag(const Arg *arg);
-@@ -2745,6 +2746,58 @@ tile(Monitor *m)
- 	}
+@@ -2745,6 +2746,56 @@ tile(Monitor *m)
+        }
  }
  
 + void
@@ -52,27 +52,26 @@ index 101a45f..5f1b762 100644
 +               if (!VISIBLEON(c, m) || c->isfloating || c->isfullscreen)
 +                       continue;
 +
-+               if (i == n - 1) {
-+                       resize(c, (struct wlr_box){nx, ny, nw, nh}, 0);
-+               } else if (horizontal) {
-+                       int w = (nw - m->gappih) / 2;
++       if (i == n - 1) {
++          resize(c, (struct wlr_box){nx, ny, nw, nh}, 0);
++          } else if (horizontal) {
++                   int w = (nw - m->gappih) / 2;
 +
-+                       resize(c, (struct wlr_box){nx, ny, w, nh}, 0);
++              resize(c, (struct wlr_box){nx, ny, w, nh}, 0);
++                     nx += w + m->gappih;
++                     nw -= w + m->gappih;
++              } else {
++                      int h = (nh - m->gappiv) / 2;
 +
-+                       nx += w + m->gappih;
-+                       nw -= w + m->gappih;
-+               } else {
-+                       int h = (nh - m->gappiv) / 2;
++                   resize(c, (struct wlr_box){nx, ny, nw, h}, 0);
 +
-+                       resize(c, (struct wlr_box){nx, ny, nw, h}, 0);
++                   ny += h + m->gappiv;
++                   nh -= h + m->gappiv;
++          }
 +
-+                       ny += h + m->gappiv;
-+                       nh -= h + m->gappiv;
-+               }
-+
-+               horizontal = !horizontal;
-+               i++;
-+       }
++           horizontal = !horizontal;
++           i++;
++   }
 +}
 +
  void
