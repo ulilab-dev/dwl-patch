@@ -77,7 +77,6 @@ index 101a45f..5f1b762 100644
 +
  void
  togglebar(const Arg *arg) {
- {
 -- 
 2.53.0
 
