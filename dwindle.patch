@@ -40,7 +40,6 @@ index 101a45f..5f1b762 100644
 +       if (n == 0)
 +               return;
 +
-+       /* 1. Terapkan OUTER GAPS pada area monitor */
 +       nx = m->w.x + m->gappoh;
 +       ny = m->w.y + m->gappov;
 +       nw = m->w.width - 2 * m->gappoh;
