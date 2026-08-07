@@ -12,7 +12,7 @@ diff --git a/dwl.c b/dwl.c
 index 101a45f..5f1b762 100644
 --- a/dwl.c
 +++ b/dwl.c
-@@ -335,6 +335,7 @@ static void startdrag(struct wl_listener *listener, void *data);
+@@ -335,7 +335,8 @@ static void startdrag(struct wl_listener *listener, void *data);
  static void tag(const Arg *arg);
  static void tagmon(const Arg *arg);
  static void tile(Monitor *m);
