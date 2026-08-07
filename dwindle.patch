@@ -15,7 +15,6 @@ index 101a45f..5f1b762 100644
  static void tag(const Arg *arg);
  static void tagmon(const Arg *arg);
  static void tile(Monitor *m);
- static void togglebar(const Arg *arg);
 +static void dwindle(Monitor *m);
  static void togglefloating(const Arg *arg);
  static void togglefullscreen(const Arg *arg);
