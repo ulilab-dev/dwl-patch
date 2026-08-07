@@ -6,9 +6,10 @@ Subject: [PATCH] implement dwl-ipc-unstable-v2
 
 ---
  Makefile                          |  14 +-
+ config.def.h                      |   1 +
  dwl.c                             | 257 ++++++++++++++++++++++++++----
  protocols/dwl-ipc-unstable-v2.xml | 181 +++++++++++++++++++++
- 3 files changed, 418 insertions(+), 34 deletions(-)
+ 4 files changed, 419 insertions(+), 34 deletions(-)
  create mode 100644 protocols/dwl-ipc-unstable-v2.xml
 
 diff --git a/Makefile b/Makefile
@@ -44,6 +45,9 @@ index 8db7409..a79a080 100644
 +	$(WAYLAND_SCANNER) private-code \
 +		protocols/dwl-ipc-unstable-v2.xml $@
  
+ config.h:
+ 	cp config.def.h $@
+
 diff --git a/dwl.c b/dwl.c
 index 8a587d1..7a4949b 100644
 --- a/dwl.c
