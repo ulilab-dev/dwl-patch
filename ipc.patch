@@ -8,7 +8,7 @@ Subject: [PATCH] implement dwl-ipc-unstable-v2
  Makefile                          |  14 +-
  dwl.c                             | 257 ++++++++++++++++++++++++++----
  protocols/dwl-ipc-unstable-v2.xml | 181 +++++++++++++++++++++
- 4 files changed, 419 insertions(+), 34 deletions(-)
+ 3 files changed, 418 insertions(+), 34 deletions(-)
  create mode 100644 protocols/dwl-ipc-unstable-v2.xml
 
 diff --git a/Makefile b/Makefile
