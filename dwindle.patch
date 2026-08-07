@@ -21,7 +21,7 @@ index 101a45f..5f1b762 100644
  static void togglefloating(const Arg *arg);
  static void togglefullscreen(const Arg *arg);
  static void toggletag(const Arg *arg);
-@@ +3280,56 @@ tile(Monitor *m)
+@@ -3279,6 +3280,56 @@ tile(Monitor *m)
         }
  }
  
