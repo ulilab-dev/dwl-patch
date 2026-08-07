@@ -5,9 +5,8 @@ Subject: [PATCH] dwl: add dwindle layout
 
 dwl: add dwindle layout
 ---
- config.def.h |  2 ++
  dwl.c        | 53 ++++++++++++++++++++++++++++++++++++++++++++++++++++
- 2 files changed, 55 insertions(+)
+ 1 files changed, 55 insertions(+)
  
 diff --git a/dwl.c b/dwl.c
 index 101a45f..5f1b762 100644
