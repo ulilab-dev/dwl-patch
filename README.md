@@ -49,7 +49,7 @@ With four windows:
 ```
 ### Download
 
-- [0.8](/dwl/dwl-patches/raw/branch/main/patches/dwindle/dwindle.patch)
+- [0.8](/dwl-patch/refs/heads/main/dwindle.patch)
 
 ### Authors
 [cana cronica](https://codeberg.org/cana)
